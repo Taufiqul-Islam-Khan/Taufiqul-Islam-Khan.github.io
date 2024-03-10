@@ -478,6 +478,89 @@ p {
 
 /* End Projects section */
 
+/* educations Section */
+#educations .educations {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+#educations .education-top {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#educations .education-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+#educations .education-item {
+  flex-basis: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: top;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 20px;
+  background-image: url(./img/edu.jpg);
+  background-size: cover;
+  margin: 10px 5%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  height: 100%;
+  font-size: 36px;
+  text-align: center;
+  width: 600px;
+  border: 3px solid rgb(67, 82, 75);
+}
+#educations .education-item:hover {
+  border: 3px solid rgb(67, 82, 75);
+  background-color: rgb(0, 255, 106);
+  background-image: url(./img/edu.jpg);
+  transform: scale(1.1);
+}
+
+#educations .education-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  opacity: 0.9;
+  z-index: -1;
+}
+
+#educations .education-bottom .icon {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+#educations .education-item h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 10px;
+  /* text-transform: uppercase; */
+}
+/* #educations .education-item h2 span {
+  color: rgb(138, 21, 6);
+} */
+#educations .education-item p {
+  color: white;
+  text-align: justify;
+}
+
+/* End educations Section */
 /* About Section */
 #about .about {
   flex-direction: column-reverse;
