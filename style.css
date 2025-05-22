@@ -1128,4 +1128,74 @@ p {
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
+
+.zoom-in {
+  animation-name: zoomIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.cta {
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(220, 20, 60, 0.4);
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  animation: fadeInUp 1s ease;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 50px;
+  background-color: crimson;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.section-title::before {
+  left: -60px;
+}
+.section-title::after {
+  right: -60px;
+}
+
+
 /* End  Media Query For Desktop */

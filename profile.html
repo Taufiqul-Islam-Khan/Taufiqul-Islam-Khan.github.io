@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>T</span>aufiqul <span>I</span>slam</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#services" data-after="Experiences">Experiences</a></li>
+            <li><a href="#educations" data-after="Education">Education</a></li>
+            <li><a href="#awards" data-after="Awards">Awards</a></li>
+            <li><a href="#projects" data-after="Research">Research</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li class="dropdown">
+              <button class="dropdown-btn"><i class="fas fa-bars"></i> Menu</button>
+              <ul class="dropdown-menu">
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">Details</a></li>
+                <li><a href="#projects">More</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero container" data-aos="fade-up">
+      <div>
+        <h1>Hello, <span></span></h1>
+        <h1>I am <span></span></h1>
+        <h1>Taufiqul Islam Khan <span></span></h1>
+        <a href="#about" class="cta">Welcome to my website</a>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section -->
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about container" data-aos="fade-right">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="./img/potrait.jpg" alt="img">
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">About <span>Me</span></h1>
+        <h2>Lecturer, <a href="https://www.bracu.ac.bd/about/people/taufiqul-islam-khan">BRAC University</a></h2>
+        <p>Currently, I hold the position of a lecturer at BRAC University, where I share my expertise in Computer Science and Engineering.
+          I completed my Bachelor's degree in the same field at BRAC University, and after my undergraduate studies, 
+          I garnered over two years of valuable industry experience as a software engineer in renowned software companies.</p>
+        <p>At the time of my undergraduate study at BRAC University (2016-2020), I maintained an outstanding 3.9 CGPA, 
+           earning a place on both the VC’s and Dean’s List. Also, by Securing
+          a merit-based scholarship, I consistently demonstrated academic excellence. Not only that, but I also
+          performed well in my earlier education, including receiving the Higher Secondary Government Scholarship
+          (82nd position) and Primary School Government Scholarship (17th position) for my exceptional performance. Moreover, as a Teaching Assistant in BRAC University (2019-2020), I supported professors in
+          courses e.g. Algorithms and Digital Logic Design, handling various responsibilities for the department.
+          Additionally, as a Student Mentor (2018-2019) at the Office of Academic Advising, I actively monitored
+          and assessed students’ academic performance, providing guidance and consultation.</p>
+        <a href="./img/Taufiq_s_CV_for_Academic-1.pdf" class="cta">Download Resume</a>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- Modal Popup -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h1>Welcome Visitor!</h1>
+      <p>This website showcases the professional journey and achievements of Taufiqul Islam Khan.</p>
+    </div>
+  </div>
+
+  <!-- Load AOS & Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Hamburger Toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navList = document.querySelector(".nav-list ul");
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navList.classList.toggle("active");
+    });
+
+    // Modal popup
+    const modal = document.getElementById("modal");
+    const closeBtn = document.querySelector(".close-button");
+    window.onload = () => {
+      setTimeout(() => {
+        modal.style.display = "block";
+      }, 1000);
+    };
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+    };
+    window.onclick = (event) => {
+      if (event.target == modal) modal.style.display = "none";
+    };
+  </script>
+
+  <!-- Modal CSS -->
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 500px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+    .close-button {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close-button:hover,
+    .close-button:focus {
+      color: black;
+      text-decoration: none;
+    }
+  </style>
+</body>
+</html>
