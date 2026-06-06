@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taufiqul Islam Khan — Researcher, Educator & Software Engineer</title>
+  <meta name="description" content="Portfolio of Taufiqul Islam Khan — M.Sc. Computer Science researcher at University of Manitoba, specializing in code review automation, AI-driven development tools, and software engineering education.">
+  <meta name="keywords" content="Taufiqul Islam Khan, Software Engineering, Code Review, LLM, Machine Learning, University of Manitoba, MAMBA Lab, Researcher, Educator">
+  <meta name="author" content="Taufiqul Islam Khan">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ========== PRELOADER ========== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__logo">TIK</div>
+      <div class="preloader__bar"><div class="preloader__fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ========== CUSTOM CURSOR ========== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ========== SCROLL PROGRESS BAR ========== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ========== PARTICLE CANVAS (Hero background) ========== -->
+  <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo-wrap" data-magnetic>
+        <span class="header__logo">TIK</span>
+        <span class="header__fullname">Taufiqul Islam Khan</span>
+      </a>
+      <nav class="header__nav" id="nav">
+        <ul class="header__links">
+          <li><a href="#hero" class="nav-link active" data-magnetic>Home</a></li>
+          <li><a href="#about" class="nav-link" data-magnetic>About</a></li>
+          <li><a href="#experience" class="nav-link" data-magnetic>Experience</a></li>
+          <li><a href="#education" class="nav-link" data-magnetic>Education</a></li>
+          <li><a href="#research" class="nav-link" data-magnetic>Research</a></li>
+          <li><a href="#projects" class="nav-link" data-magnetic>Projects</a></li>
+          <li><a href="#talks" class="nav-link" data-magnetic>Talks</a></li>
+          <li><a href="#skills" class="nav-link" data-magnetic>Skills</a></li>
+          <li><a href="#contact" class="nav-link" data-magnetic>Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="https://www.linkedin.com/in/taufiqul-islam-khan-55603a1b8/" target="_blank" rel="noopener" class="header__social" aria-label="LinkedIn" data-magnetic>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://github.com/Taufiqul-Islam-Khan" target="_blank" rel="noopener" class="header__social" aria-label="GitHub" data-magnetic>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://scholar.google.com/citations?user=yINPGNUAAAAJ&hl=en&authuser=4" target="_blank" rel="noopener" class="header__social" aria-label="Google Scholar" data-magnetic>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/tawfiqul.khan.3/" target="_blank" rel="noopener" class="header__social" aria-label="Facebook" data-magnetic>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+      <button class="header__burger" id="burger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+      <div class="hero__tags">
+        <span class="tag">For Recruiters</span>
+        <span class="tag">For Professors</span>
+        <span class="tag">For Researchers</span>
+        <span class="tag">For Collaborators</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__title-line">I research</span>
+        <span class="hero__title-line hero__title-highlight">
+          <span class="hero__title-accent-bar"></span>
+          <span class="gradient-text">AI-driven code review</span>
+        </span>
+        <span class="hero__title-line">and software engineering,</span>
+        <span class="hero__title-line hero__title-fade">building practical tools that help developers <em>write,</em> <em>review,</em> and <em>maintain</em> better software.</span>
+      </h1>
+      <div class="hero__typed-wrap">
+        <span class="hero__typed-prefix">I am a&nbsp;</span>
+        <span class="hero__typed" id="typedText"></span>
+        <span class="hero__typed-cursor">|</span>
+      </div>
+      <p class="hero__subtitle">
+        M.Sc. Computer Science researcher at the University of Manitoba, Sessional Instructor, and member of MAMBA Lab, working on code review automation, LLM-based development tools, and practical software engineering systems.
+      </p>
+      <div class="hero__ctas">
+        <a href="#experience" class="btn btn--primary btn--glow" data-magnetic>
+          <span>View Professional Journey</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+        <a href="Taufiqul_Islam_Khan_Resume March 2026.pdf" download class="btn btn--outline" data-magnetic>
+          <span>Download Resume</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        </a>
+        <a href="#contact" class="btn btn--ghost" data-magnetic>Contact Me</a>
+      </div>
+      <div class="hero__scroll-indicator">
+        <div class="mouse">
+          <div class="mouse__wheel"></div>
+        </div>
+        <span>Scroll to explore</span>
+      </div>
+    </div>
+    <div class="hero__bg-shapes">
+      <div class="shape shape--1"></div>
+      <div class="shape shape--2"></div>
+      <div class="shape shape--3"></div>
+    </div>
+  </section>
+
+  <!-- ========== MARQUEE TICKER ========== -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span>Software Engineering</span><span class="marquee__dot"></span>
+      <span>Code Review</span><span class="marquee__dot"></span>
+      <span>Machine Learning</span><span class="marquee__dot"></span>
+      <span>LLM Research</span><span class="marquee__dot"></span>
+      <span>Full-Stack Development</span><span class="marquee__dot"></span>
+      <span>Teaching & Mentoring</span><span class="marquee__dot"></span>
+      <span>Computer Vision</span><span class="marquee__dot"></span>
+      <span>Data Engineering</span><span class="marquee__dot"></span>
+      <span>Software Engineering</span><span class="marquee__dot"></span>
+      <span>Code Review</span><span class="marquee__dot"></span>
+      <span>Machine Learning</span><span class="marquee__dot"></span>
+      <span>LLM Research</span><span class="marquee__dot"></span>
+      <span>Full-Stack Development</span><span class="marquee__dot"></span>
+      <span>Teaching & Mentoring</span><span class="marquee__dot"></span>
+      <span>Computer Vision</span><span class="marquee__dot"></span>
+      <span>Data Engineering</span><span class="marquee__dot"></span>
+    </div>
+  </div>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <span class="section__label reveal-slide">About Me</span>
+      <h2 class="section__title split-text">Researcher, Educator & Engineer</h2>
+      <div class="about__grid">
+        <div class="about__photo reveal-scale">
+          <div class="about__photo-placeholder">
+            <img src="potrait of me.jpg" alt="Taufiqul Islam Khan">
+          </div>
+          <div class="about__photo-decoration"></div>
+        </div>
+        <div class="about__content">
+          <p class="reveal-slide">
+            I'm Taufiqul Islam Khan, a Computer Science graduate researcher at the University of Manitoba, working under Professor Shaowei Wang at the MAMBA Lab. My research focuses on software engineering, code review automation, and leveraging large language models to build smarter development tools.
+          </p>
+          <p class="reveal-slide">
+            Before starting my M.Sc., I spent over three years as a full-time lecturer at BRAC University in Dhaka, where I taught Software Engineering, Programming, Computer Interfacing, and Robotics. I also served as Course Coordinator, designed curricula, and mentored students through their academic journeys.
+          </p>
+          <p class="reveal-slide">
+            On the industry side, I've worked as a software engineer building backend services with Spring Boot, data processing pipelines with Python and AWS, and machine learning models for real-world applications including license plate detection and data validation systems.
+          </p>
+          <p class="reveal-slide">
+            I'm driven by the intersection of teaching, research, and engineering — building tools that make software development more efficient while helping the next generation of developers grow.
+          </p>
+          <div class="about__links reveal-slide" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;">
+            <a href="https://www.bracu.ac.bd/about/people/taufiqul-islam-khan" target="_blank" rel="noopener" class="btn btn--outline" style="padding:8px 18px;font-size:.8rem;" data-magnetic>BRACU Faculty Profile</a>
+            <a href="https://cse.sds.bracu.ac.bd/faculty_profile/58/mr_taufiqul_islam_khan" target="_blank" rel="noopener" class="btn btn--outline" style="padding:8px 18px;font-size:.8rem;" data-magnetic>BRACU CSE Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE SECTION ========== -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <span class="section__label reveal-slide">Experience</span>
+      <h2 class="section__title split-text">Professional Journey</h2>
+      <div class="timeline">
+
+        <div class="timeline__item reveal-slide">
+          <div class="timeline__dot"><div class="timeline__dot-ping"></div></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Sessional Instructor</h3>
+                <p class="timeline__org">University of Manitoba</p>
+              </div>
+              <div class="timeline__meta">
+                <span class="timeline__badge">Current</span>
+                <span class="timeline__date">Jan 2026 – Present</span>
+                <span class="timeline__location">Winnipeg, Canada</span>
+              </div>
+            </div>
+            <ul class="timeline__details">
+              <li>Delivering lectures for COMP 3350 Software Engineering I to undergraduate students</li>
+              <li>Instructing in agile methodologies, software design principles, and testing practices</li>
+              <li>Mentoring student teams through full-cycle software projects</li>
+              <li>Designing, administering, and evaluating assessments and examinations</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal-slide">
+          <div class="timeline__dot"><div class="timeline__dot-ping"></div></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">M.Sc. Research Assistant</h3>
+                <p class="timeline__org">MAMBA Lab, University of Manitoba</p>
+              </div>
+              <div class="timeline__meta">
+                <span class="timeline__badge">Current</span>
+                <span class="timeline__date">2025 – Ongoing</span>
+                <span class="timeline__location">Winnipeg, Canada</span>
+              </div>
+            </div>
+            <ul class="timeline__details">
+              <li>Researching software engineering, code review automation, and LLM-based development tools</li>
+              <li>Working under the supervision of Professor Shaowei Wang</li>
+              <li>Published survey on code review benchmarks in pre-LLM and LLM era</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal-slide">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Full-Time Lecturer</h3>
+                <p class="timeline__org">BRAC University</p>
+              </div>
+              <div class="timeline__meta">
+                <span class="timeline__date">Jun 2021 – Dec 2024</span>
+                <span class="timeline__location">Dhaka, Bangladesh</span>
+              </div>
+            </div>
+            <ul class="timeline__details">
+              <li>Course Coordinator for Software Engineering and Introduction to Robotics (Lab)</li>
+              <li>Taught Software Engineering, Programming Language I, Computer Interfacing, and Robotics</li>
+              <li>Conducted laboratory sessions and fulfilled departmental administrative responsibilities</li>
+              <li>Designed examination papers, graded assessments, and invigilated examinations</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal-slide">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Software Engineer</h3>
+                <p class="timeline__org">BJIT Ltd.</p>
+              </div>
+              <div class="timeline__meta">
+                <span class="timeline__date">Oct 2021 – Jul 2022</span>
+                <span class="timeline__location">Dhaka, Bangladesh</span>
+              </div>
+            </div>
+            <ul class="timeline__details">
+              <li>Developed backend services using Spring Boot, REST APIs, and 3dSpace database integrations</li>
+              <li>Managed project workflows with Jira, Redmine, Bitbucket, and GitHub in an agile environment</li>
+              <li>Applied Adapter and Observer design patterns; wrote unit tests and performed code refactoring</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal-slide">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Software Engineer</h3>
+                <p class="timeline__org">ServiceEngine BPO</p>
+              </div>
+              <div class="timeline__meta">
+                <span class="timeline__date">Jul 2020 – Oct 2021</span>
+                <span class="timeline__location">Dhaka, Bangladesh</span>
+              </div>
+            </div>
+            <ul class="timeline__details">
+              <li>Engineered web scraping pipelines using Groovy, Python, and Selenium at scale</li>
+              <li>Built ML models in Python and TensorFlow for data validation and quality-checking</li>
+              <li>Architected automated data pipelines using Jenkins CI/CD and AWS cloud infrastructure</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal-slide">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Student Tutor</h3>
+                <p class="timeline__org">Department of CSE, BRAC University</p>
+              </div>
+              <div class="timeline__meta">
+                <span class="timeline__date">2018 – 2020</span>
+                <span class="timeline__location">Dhaka, Bangladesh</span>
+              </div>
+            </div>
+            <ul class="timeline__details">
+              <li>Assisted faculty in conducting lab sessions and tutorials for undergraduate courses</li>
+              <li>Provided academic guidance and one-on-one support to students on programming and coursework</li>
+              <li>Graded assignments, projects, and exams under faculty supervision</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION SECTION ========== -->
+  <section class="section education" id="education">
+    <div class="container">
+      <span class="section__label reveal-slide">Education</span>
+      <h2 class="section__title split-text">Academic Background</h2>
+      <div class="education__grid">
+        <div class="edu-card reveal-slide">
+          <div class="edu-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></svg>
+          </div>
+          <div class="edu-card__degree">M.Sc. in Computer Science</div>
+          <div class="edu-card__school">University of Manitoba</div>
+          <div class="edu-card__year">2025 – Ongoing</div>
+          <p class="edu-card__detail">Research Assistant at MAMBA Lab under Professor Shaowei Wang, focusing on code review automation and LLM-based development tools.</p>
+        </div>
+        <div class="edu-card reveal-slide">
+          <div class="edu-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></svg>
+          </div>
+          <div class="edu-card__degree">B.Sc. in Computer Science & Engineering</div>
+          <div class="edu-card__school">BRAC University &middot; CGPA: 3.9 / 4.0</div>
+          <div class="edu-card__year">2020</div>
+          <p class="edu-card__detail">Thesis: 6LoWPAN Based Futuristic Architecture for Smart Home. VC's List &amp; Dean's List recipient. 70% merit-based tuition scholarship.</p>
+        </div>
+        <div class="edu-card reveal-slide">
+          <div class="edu-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h6"/></svg>
+          </div>
+          <div class="edu-card__degree">H.S.C. in Science</div>
+          <div class="edu-card__school">Dhaka College</div>
+          <div class="edu-card__year">2015</div>
+          <p class="edu-card__detail">GPA 5.00 / 5.00 (Golden GPA 5). Ranked 82nd in Dhaka Board. National-level academic distinction.</p>
+        </div>
+        <div class="edu-card reveal-slide">
+          <div class="edu-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h6"/></svg>
+          </div>
+          <div class="edu-card__degree">S.S.C. in Science</div>
+          <div class="edu-card__school">Shere Bangla Nagar Govt. Boys' High School</div>
+          <div class="edu-card__year">2013</div>
+          <p class="edu-card__detail">GPA 5.00 / 5.00 (Golden GPA 5). Recipient of Primary School Government Scholarship, ranked 17th in district.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESEARCH / PUBLICATIONS SECTION ========== -->
+  <section class="section research" id="research">
+    <div class="container">
+      <span class="section__label reveal-slide">Research & Publications</span>
+      <h2 class="section__title split-text">Academic Contributions</h2>
+      <div class="research__grid">
+
+        <article class="research-card reveal-slide">
+          <div class="research-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><path d="M8 7h8M8 11h6"/></svg>
+          </div>
+          <div class="research-card__type">arXiv Preprint &middot; 2026</div>
+          <h3 class="research-card__title">A Survey of Code Review Benchmarks and Evaluation Practices in Pre-LLM and LLM Era</h3>
+          <p class="research-card__authors">TI Khan, S Wang, H Zhang, TH Chen</p>
+          <p class="research-card__summary">A comprehensive survey examining how code review benchmarks and evaluation methodologies have evolved from traditional approaches to the modern LLM-driven landscape, identifying gaps and opportunities for standardized evaluation in automated code review research.</p>
+          <div class="research-card__tags">
+            <span class="tool-tag">Code Review</span>
+            <span class="tool-tag">LLM</span>
+            <span class="tool-tag">Benchmark</span>
+            <span class="tool-tag">Survey</span>
+            <span class="tool-tag">Software Engineering</span>
+          </div>
+          <a href="https://doi.org/10.48550/arXiv.2602.13377" target="_blank" rel="noopener" class="project-card__link">Read Paper <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+        </article>
+
+        <article class="research-card reveal-slide">
+          <div class="research-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="research-card__type">ICAICT 2020 &middot; Cited by 3</div>
+          <h3 class="research-card__title">6LoWPAN Based Futuristic Smart Architecture for Home Automation</h3>
+          <p class="research-card__authors">SMJ Hasan, M Ali, TI Khan, F Afrin, MM Islam</p>
+          <p class="research-card__summary">Proposed a futuristic smart home architecture using 6LoWPAN wireless protocol for efficient, low-power IoT device communication and home automation, contributing to the growing body of IoT systems research.</p>
+          <div class="research-card__tags">
+            <span class="tool-tag">IoT</span>
+            <span class="tool-tag">6LoWPAN</span>
+            <span class="tool-tag">Smart Home</span>
+          </div>
+          <a href="https://doi.org/10.1109/ICAICT51780.2020.9333483" target="_blank" rel="noopener" class="project-card__link">Read Paper <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+        </article>
+
+        <article class="research-card reveal-slide">
+          <div class="research-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="research-card__type">Publication</div>
+          <h3 class="research-card__title">Transfer Learning Using CNNs for COVID-19 Detection with X-Ray Images</h3>
+          <p class="research-card__authors">PK Das, M Rashidunnabi, TI Khan, SRR Ahmad</p>
+          <p class="research-card__summary">Applied transfer learning with convolutional neural networks to detect COVID-19 from chest X-ray images, contributing to rapid diagnostic research during the pandemic.</p>
+          <div class="research-card__tags">
+            <span class="tool-tag">Deep Learning</span>
+            <span class="tool-tag">Transfer Learning</span>
+            <span class="tool-tag">Medical Imaging</span>
+          </div>
+          <a href="https://scholar.google.com/citations?user=yINPGNUAAAAJ&hl=en&authuser=4" target="_blank" rel="noopener" class="project-card__link">View on Scholar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <span class="section__label reveal-slide">Selected Work</span>
+      <h2 class="section__title split-text">Projects & Case Studies</h2>
+
+      <!-- Project Filter Tabs -->
+      <div class="project-filters reveal-slide">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ml">AI / ML</button>
+        <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+        <button class="filter-btn" data-filter="data">Data / Backend</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+      </div>
+
+      <div class="projects__grid">
+
+        <article class="project-card tilt-card" data-category="ml" data-modal="modal-evoting">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Blockchain / ML</span>
+            <span class="project-card__year">2026</span>
+          </div>
+          <h3 class="project-card__title">Secure E-Voting with Blockchain & ML</h3>
+          <p class="project-card__desc">A full-stack e-voting platform integrating blockchain smart contracts with ML-based facial recognition to ensure secure, tamper-resistant, and privacy-preserving electoral processes.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Developer & Researcher</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">Blockchain</span>
+              <span class="tool-tag">Smart Contracts</span>
+              <span class="tool-tag">Machine Learning</span>
+              <span class="tool-tag">Facial Recognition</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-evoting">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <article class="project-card tilt-card" data-category="ml" data-modal="modal-plate">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Computer Vision</span>
+            <span class="project-card__year">2021</span>
+          </div>
+          <h3 class="project-card__title">Automated License Plate Detection</h3>
+          <p class="project-card__desc">A real-time computer vision system for detecting and recognizing license plates from complex road traffic video feeds, deployed in a production data pipeline.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> ML Engineer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">TensorFlow</span>
+              <span class="tool-tag">OpenCV</span>
+              <span class="tool-tag">OCR</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-plate">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <article class="project-card tilt-card" data-category="fullstack" data-modal="modal-devconnect">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Full-Stack / MERN</span>
+            <span class="project-card__year">2022</span>
+          </div>
+          <h3 class="project-card__title">Developers Connector Platform</h3>
+          <p class="project-card__desc">A full-stack social platform enabling developers to connect, share technical posts, and collaborate on engineering problems with GitHub integration.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Full-Stack Developer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">MongoDB</span>
+              <span class="tool-tag">Express</span>
+              <span class="tool-tag">React</span>
+              <span class="tool-tag">Node.js</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-devconnect">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <article class="project-card tilt-card" data-category="data" data-modal="modal-spring">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Backend / Enterprise</span>
+            <span class="project-card__year">2022</span>
+          </div>
+          <h3 class="project-card__title">Enterprise Backend with Spring Boot</h3>
+          <p class="project-card__desc">Designed and implemented enterprise backend services using Adapter and Observer design patterns to improve system modularity and scalability for client solutions.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Backend Engineer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">Spring Boot</span>
+              <span class="tool-tag">REST API</span>
+              <span class="tool-tag">Java</span>
+              <span class="tool-tag">3dSpace</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-spring">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <article class="project-card tilt-card" data-category="data" data-modal="modal-pipeline">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Data Engineering</span>
+            <span class="project-card__year">2021</span>
+          </div>
+          <h3 class="project-card__title">Automated Data Processing Pipelines</h3>
+          <p class="project-card__desc">Engineered automated Python-based pipelines for large-scale dataset processing with CI/CD deployment on AWS, reducing manual effort and improving data quality.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Software Engineer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Jenkins</span>
+              <span class="tool-tag">AWS</span>
+              <span class="tool-tag">Selenium</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-pipeline">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <article class="project-card tilt-card" data-category="mobile" data-modal="modal-opu">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Mobile / EdTech</span>
+            <span class="project-card__year">2019</span>
+          </div>
+          <h3 class="project-card__title">Opu's Coaching Android App</h3>
+          <p class="project-card__desc">An Android application connecting teachers and students for structured online learning, featuring session scheduling and real-time data synchronization.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Mobile Developer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">Android</span>
+              <span class="tool-tag">Java</span>
+              <span class="tool-tag">Firebase</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-opu">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <article class="project-card tilt-card" data-category="data" data-modal="modal-stackoverflow">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Web App / Python</span>
+            <span class="project-card__year">2021</span>
+          </div>
+          <h3 class="project-card__title">StackOverflow Question Search Tool</h3>
+          <p class="project-card__desc">A Flask-based web application for searching and filtering StackOverflow questions by topic, vote count, and recency, with color-coded visualization of question quality.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Developer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Flask</span>
+              <span class="tool-tag">HTML/CSS</span>
+              <span class="tool-tag">API</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-stackoverflow">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <article class="project-card tilt-card" data-category="ml" data-modal="modal-movierec">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Machine Learning / R</span>
+            <span class="project-card__year">2020</span>
+          </div>
+          <h3 class="project-card__title">Movie Recommendation System</h3>
+          <p class="project-card__desc">A machine learning-based recommendation engine built in R using the MovieLens 20M dataset, learning user viewing patterns to suggest relevant movies.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Developer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">R</span>
+              <span class="tool-tag">Machine Learning</span>
+              <span class="tool-tag">MovieLens</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-movierec">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <article class="project-card tilt-card" data-category="data" data-modal="modal-healthcare">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Data Science / R</span>
+            <span class="project-card__year">2020</span>
+          </div>
+          <h3 class="project-card__title">Healthcare Data Analysis</h3>
+          <p class="project-card__desc">An R-based exploratory data analysis project examining healthcare datasets to identify patterns between health risk factors, smoking status, and stroke incidence.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Data Analyst</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">R</span>
+              <span class="tool-tag">Data Analysis</span>
+              <span class="tool-tag">Visualization</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-healthcare">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECT MODALS ========== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modalContent">
+      <button class="modal__close" id="modalClose">&times;</button>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Modal data (hidden, used by JS) -->
+  <template id="modal-evoting">
+    <span class="modal__category">Blockchain / ML &middot; 2026</span>
+    <h2>Secure E-Voting with Blockchain & ML</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>A full-stack e-voting platform combining blockchain smart contracts with ML-based facial recognition to deliver secure, tamper-resistant, and privacy-conscious electoral processes with real-time biometric verification.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Problem</h4>
+      <p>Traditional voting systems are vulnerable to fraud, manipulation, and identity theft. This project addresses all three through a decentralized, biometric-secured approach.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Blockchain-based vote recording with smart contract validation</li>
+        <li>Real-time ML facial recognition for voter identity verification</li>
+        <li>Tamper-proof, transparent, and auditable voting process</li>
+        <li>Privacy-conscious design with encrypted biometric data</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">Blockchain</span><span class="tool-tag">Smart Contracts</span><span class="tool-tag">Machine Learning</span><span class="tool-tag">Facial Recognition</span><span class="tool-tag">Full-Stack</span>
+    </div>
+    <a href="https://github.com/Taufiqul-Islam-Khan/Leveraging-Blockchain-and-Machine-Learning-for-a-Secure-and-Transparent-Voting-System" target="_blank" rel="noopener" class="project-card__link" style="margin-top:16px">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+  </template>
+
+  <template id="modal-plate">
+    <span class="modal__category">Computer Vision &middot; 2021</span>
+    <h2>Automated License Plate Detection</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>Developed a real-time computer vision system to detect and recognize license plates from complex road traffic video feeds at ServiceEngine BPO.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Real-time video stream processing with OpenCV</li>
+        <li>TensorFlow-based deep learning model for plate region detection</li>
+        <li>OCR integration for character extraction and recognition</li>
+        <li>Robust performance under varying lighting and angle conditions</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">Python</span><span class="tool-tag">TensorFlow</span><span class="tool-tag">OpenCV</span><span class="tool-tag">OCR</span><span class="tool-tag">Deep Learning</span>
+    </div>
+    <a href="https://github.com/Taufiqul-Islam-Khan/Number-Plate-Recognition" target="_blank" rel="noopener" class="project-card__link" style="margin-top:16px">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+  </template>
+
+  <template id="modal-devconnect">
+    <span class="modal__category">Full-Stack / MERN &middot; 2022</span>
+    <h2>Developers Connector Platform</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>Built a live full-stack social platform enabling developers to connect, share posts, and collaborate on technical problems using the MERN stack at BJIT Ltd.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>User authentication with JWT and profile management</li>
+        <li>Post creation, commenting, and developer collaboration feeds</li>
+        <li>GitHub integration for showcasing repositories</li>
+        <li>Responsive UI built with React and Redux state management</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">MongoDB</span><span class="tool-tag">Express</span><span class="tool-tag">React</span><span class="tool-tag">Node.js</span><span class="tool-tag">Redux</span>
+    </div>
+    <a href="https://github.com/Taufiqul-Islam-Khan/MERN-project" target="_blank" rel="noopener" class="project-card__link" style="margin-top:16px">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+  </template>
+
+  <template id="modal-spring">
+    <span class="modal__category">Backend / Enterprise &middot; 2022</span>
+    <h2>Enterprise Backend with Spring Boot</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>Developed and maintained backend services using Spring Boot, REST APIs, and 3dSpace database integrations for enterprise client solutions at BJIT Ltd.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Implemented Adapter and Observer design patterns for modularity</li>
+        <li>RESTful API architecture with Spring Boot</li>
+        <li>3dSpace database integration for product lifecycle management</li>
+        <li>Systematic code refactoring and comprehensive unit testing</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">Spring Boot</span><span class="tool-tag">REST API</span><span class="tool-tag">Java</span><span class="tool-tag">3dSpace</span><span class="tool-tag">Design Patterns</span>
+    </div>
+  </template>
+
+  <template id="modal-pipeline">
+    <span class="modal__category">Data Engineering &middot; 2021</span>
+    <h2>Automated Data Processing Pipelines</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>Developed automated Python scripts to process large-scale datasets and reformat them according to client-defined specifications, deployed on AWS with Jenkins CI/CD at ServiceEngine BPO.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Web scraping pipelines with Groovy, Python, and Selenium</li>
+        <li>OCR and image processing for unstructured data extraction</li>
+        <li>Supervised ML models for data validation and quality-checking</li>
+        <li>Cost-efficient automated pipelines on AWS cloud infrastructure</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">Python</span><span class="tool-tag">Jenkins</span><span class="tool-tag">AWS</span><span class="tool-tag">Selenium</span><span class="tool-tag">TensorFlow</span>
+    </div>
+  </template>
+
+  <template id="modal-opu">
+    <span class="modal__category">Mobile / EdTech &middot; 2019</span>
+    <h2>Opu's Coaching Android App</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>Designed and built an Android application to connect teachers and students for structured online learning sessions as an academic project at BRAC University.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Teacher and student registration and profile management</li>
+        <li>Session scheduling and booking system</li>
+        <li>Real-time Firebase integration for data synchronization</li>
+        <li>Clean Material Design UI for intuitive navigation</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">Android</span><span class="tool-tag">Java</span><span class="tool-tag">Firebase</span><span class="tool-tag">Material Design</span>
+    </div>
+  </template>
+
+  <template id="modal-stackoverflow">
+    <span class="modal__category">Web App / Python &middot; 2021</span>
+    <h2>StackOverflow Question Search Tool</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>A Flask-based web application that enables users to search StackOverflow for highly-voted and recent questions based on custom criteria, streamlining research and topic exploration.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Search any topic on StackOverflow with customizable filters for quantity and time frame</li>
+        <li>Color-coded results: green for positive scores, red for negative, blue for neutral</li>
+        <li>Answer count analysis and common tag identification for quick relevance assessment</li>
+        <li>Web-based interface built with Flask, HTML, CSS, and JavaScript</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">Python</span><span class="tool-tag">Flask</span><span class="tool-tag">HTML/CSS</span><span class="tool-tag">StackOverflow API</span>
+    </div>
+    <a href="https://github.com/Taufiqul-Islam-Khan/StackOverflowTask" target="_blank" rel="noopener" class="project-card__link" style="margin-top:16px">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+  </template>
+
+  <template id="modal-movierec">
+    <span class="modal__category">Machine Learning / R &middot; 2020</span>
+    <h2>Movie Recommendation System</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>A machine learning-based recommendation engine built in R that learns user viewing patterns and suggests relevant movies, utilizing the MovieLens 20M dataset from Kaggle.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Collaborative filtering-based recommendation algorithm</li>
+        <li>Trained on MovieLens 20M dataset with movies and ratings data</li>
+        <li>Personalized suggestions based on user viewing history and preferences</li>
+        <li>Demonstrates practical recommendation system architecture used by streaming platforms</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">R</span><span class="tool-tag">Machine Learning</span><span class="tool-tag">Recommendation System</span><span class="tool-tag">MovieLens</span>
+    </div>
+    <a href="https://github.com/Taufiqul-Islam-Khan/Movie-Recomendation-System-using-R-language" target="_blank" rel="noopener" class="project-card__link" style="margin-top:16px">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+  </template>
+
+  <template id="modal-healthcare">
+    <span class="modal__category">Data Science / R &middot; 2020</span>
+    <h2>Healthcare Data Analysis</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>An R-based exploratory data analysis project focused on healthcare datasets, examining patterns between various health risk factors and disease outcomes, particularly stroke prediction.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Statistical analysis of stroke healthcare dataset with multiple health variables</li>
+        <li>Visualizations: bar charts, histograms, and line charts comparing risk factors</li>
+        <li>Analysis of smoking status, diabetes, work type, and gender-based disease patterns</li>
+        <li>Exploratory insights for health risk factor identification and pattern recognition</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">R</span><span class="tool-tag">Data Analysis</span><span class="tool-tag">Healthcare</span><span class="tool-tag">Visualization</span>
+    </div>
+    <a href="https://github.com/Taufiqul-Islam-Khan/health-Care-Data-Analysis-Project" target="_blank" rel="noopener" class="project-card__link" style="margin-top:16px">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+  </template>
+
+  <!-- ========== TALKS, PRESENTATIONS & COMMUNITY ENGAGEMENT ========== -->
+  <section class="section talks" id="talks">
+    <div class="container">
+      <span class="section__label reveal-slide">Talks & Engagement</span>
+      <h2 class="section__title split-text">Talks, Presentations & Community Engagement</h2>
+      <div class="talks__grid">
+
+        <article class="talk-card reveal-slide">
+          <div class="talk-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="talk-card__type">Poster Presentation &middot; Spring 2026</div>
+          <h3 class="talk-card__title">CSER Poster Presentation</h3>
+          <p class="talk-card__desc">Presented research work at the CSER poster presentation, sharing ongoing software engineering research and receiving feedback from academic and industry participants.</p>
+          <div class="talk-card__tags">
+            <span class="tool-tag">Software Engineering</span>
+            <span class="tool-tag">Research</span>
+            <span class="tool-tag">Academic</span>
+          </div>
+        </article>
+
+        <article class="talk-card reveal-slide">
+          <div class="talk-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="talk-card__type">Invited Talk</div>
+          <h3 class="talk-card__title">BRAC University Computer Club Talk</h3>
+          <p class="talk-card__desc">Delivered a student-focused talk for BRAC University Computer Club, sharing academic insights, software engineering experiences, and career-oriented guidance with students.</p>
+          <div class="talk-card__tags">
+            <span class="tool-tag">Mentoring</span>
+            <span class="tool-tag">Career Guidance</span>
+            <span class="tool-tag">Student Engagement</span>
+          </div>
+        </article>
+
+        <article class="talk-card reveal-slide">
+          <div class="talk-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></svg>
+          </div>
+          <div class="talk-card__type">Student Mentoring</div>
+          <h3 class="talk-card__title">Orientation & Student Mentoring Session</h3>
+          <p class="talk-card__desc">Participated in orientation and student mentoring sessions to guide new students on academic planning, university life, software engineering learning paths, and professional development.</p>
+          <div class="talk-card__tags">
+            <span class="tool-tag">Orientation</span>
+            <span class="tool-tag">Mentoring</span>
+            <span class="tool-tag">Academic Planning</span>
+          </div>
+        </article>
+
+        <article class="talk-card reveal-slide">
+          <div class="talk-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </div>
+          <div class="talk-card__type">Community Engagement</div>
+          <h3 class="talk-card__title">School & Coaching Center Academic Talk</h3>
+          <p class="talk-card__desc">Delivered motivational and academic guidance sessions for school and coaching-center students, focusing on study planning, computer science interest development, and career preparation.</p>
+          <div class="talk-card__tags">
+            <span class="tool-tag">Motivation</span>
+            <span class="tool-tag">Education</span>
+            <span class="tool-tag">Community</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS SECTION ========== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <span class="section__label reveal-slide">Skills & Tools</span>
+      <h2 class="section__title split-text">Technical Proficiencies</h2>
+      <div class="skills__grid">
+        <div class="skill-group reveal-slide">
+          <h3 class="skill-group__title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Programming Languages
+          </h3>
+          <div class="skill-group__items">
+            <span class="skill-chip" data-level="95">Python</span>
+            <span class="skill-chip" data-level="90">Java</span>
+            <span class="skill-chip" data-level="80">JavaScript</span>
+            <span class="skill-chip" data-level="85">SQL</span>
+            <span class="skill-chip" data-level="80">HTML</span>
+            <span class="skill-chip" data-level="75">CSS</span>
+            <span class="skill-chip" data-level="70">Groovy</span>
+          </div>
+        </div>
+        <div class="skill-group reveal-slide">
+          <h3 class="skill-group__title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Frameworks & Libraries
+          </h3>
+          <div class="skill-group__items">
+            <span class="skill-chip" data-level="90">Spring Boot</span>
+            <span class="skill-chip" data-level="80">React</span>
+            <span class="skill-chip" data-level="75">Flask</span>
+            <span class="skill-chip" data-level="80">Node.js</span>
+            <span class="skill-chip" data-level="75">Express</span>
+            <span class="skill-chip" data-level="85">TensorFlow</span>
+            <span class="skill-chip" data-level="80">Selenium</span>
+          </div>
+        </div>
+        <div class="skill-group reveal-slide">
+          <h3 class="skill-group__title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            AI / ML / Research
+          </h3>
+          <div class="skill-group__items">
+            <span class="skill-chip" data-level="90">Machine Learning</span>
+            <span class="skill-chip" data-level="85">Deep Learning</span>
+            <span class="skill-chip" data-level="88">NLP / LLM</span>
+            <span class="skill-chip" data-level="80">Computer Vision</span>
+            <span class="skill-chip" data-level="85">Data Science</span>
+            <span class="skill-chip" data-level="92">SE Research</span>
+          </div>
+        </div>
+        <div class="skill-group reveal-slide">
+          <h3 class="skill-group__title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            Databases & Cloud
+          </h3>
+          <div class="skill-group__items">
+            <span class="skill-chip" data-level="80">MongoDB</span>
+            <span class="skill-chip" data-level="85">SQL Databases</span>
+            <span class="skill-chip" data-level="75">AWS</span>
+            <span class="skill-chip" data-level="70">3dSpace</span>
+          </div>
+        </div>
+        <div class="skill-group reveal-slide">
+          <h3 class="skill-group__title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            Tools & Platforms
+          </h3>
+          <div class="skill-group__items">
+            <span class="skill-chip" data-level="90">Git</span>
+            <span class="skill-chip" data-level="85">GitHub</span>
+            <span class="skill-chip" data-level="80">Bitbucket</span>
+            <span class="skill-chip" data-level="80">Jenkins CI/CD</span>
+            <span class="skill-chip" data-level="85">Jira</span>
+            <span class="skill-chip" data-level="90">Linux</span>
+            <span class="skill-chip" data-level="85">Bash</span>
+            <span class="skill-chip" data-level="88">LaTeX</span>
+            <span class="skill-chip" data-level="85">Overleaf</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ACHIEVEMENTS SECTION ========== -->
+  <section class="section impact" id="achievements">
+    <div class="container">
+      <span class="section__label reveal-slide">At a Glance</span>
+      <h2 class="section__title split-text">Impact & Achievements</h2>
+      <div class="impact__grid">
+        <div class="impact__card reveal-slide">
+          <div class="impact__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="impact__number" data-target="5">0</div>
+          <div class="impact__label">Years in Academia & Engineering</div>
+        </div>
+        <div class="impact__card reveal-slide">
+          <div class="impact__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          </div>
+          <div class="impact__number" data-target="3">0</div>
+          <div class="impact__label">Research Publications</div>
+        </div>
+        <div class="impact__card reveal-slide">
+          <div class="impact__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="impact__number" data-target="9">0</div>
+          <div class="impact__label">Technical Projects</div>
+        </div>
+        <div class="impact__card reveal-slide">
+          <div class="impact__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="impact__number" data-target="8">0</div>
+          <div class="impact__label">Awards & Distinctions</div>
+        </div>
+      </div>
+      <div class="achievements__list">
+        <div class="achievement reveal-slide">
+          <div class="achievement__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div>
+            <strong>VC's List & Dean's List</strong>
+            <p>Recognized for academic excellence at BRAC University (2016 – 2020)</p>
+          </div>
+        </div>
+        <div class="achievement reveal-slide">
+          <div class="achievement__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div>
+            <strong>70% Merit-Based Tuition Scholarship</strong>
+            <p>Awarded tuition fee waiver for outstanding academic performance at BRAC University</p>
+          </div>
+        </div>
+        <div class="achievement reveal-slide">
+          <div class="achievement__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div>
+            <strong>82nd Position in Dhaka Board (H.S.C.)</strong>
+            <p>Ranked among the top performers in the Higher Secondary Certificate examination</p>
+          </div>
+        </div>
+        <div class="achievement reveal-slide">
+          <div class="achievement__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div>
+            <strong>Primary School Government Scholarship</strong>
+            <p>Ranked 17th in district and awarded a government scholarship for academic excellence</p>
+          </div>
+        </div>
+        <div class="achievement reveal-slide">
+          <div class="achievement__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div>
+            <strong>Golden GPA 5.00 / 5.00 in H.S.C.</strong>
+            <p>Achieved the highest possible score in the Higher Secondary Certificate examination</p>
+          </div>
+        </div>
+        <div class="achievement reveal-slide">
+          <div class="achievement__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div>
+            <strong>Golden GPA 5.00 / 5.00 in S.S.C.</strong>
+            <p>Achieved the highest possible score in the Secondary School Certificate examination</p>
+          </div>
+        </div>
+        <div class="achievement reveal-slide">
+          <div class="achievement__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div>
+            <strong>Published Research in SE & IoT</strong>
+            <p>Published peer-reviewed research in software engineering and IoT domains</p>
+          </div>
+        </div>
+        <div class="achievement reveal-slide">
+          <div class="achievement__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div>
+            <strong>5+ Years of Teaching & Engineering</strong>
+            <p>Combined experience spanning university-level teaching and professional software engineering</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section testimonials">
+    <div class="container">
+      <span class="section__label reveal-slide">Testimonials</span>
+      <h2 class="section__title split-text">What Others Say</h2>
+      <div class="testimonials__slider" id="testimonialSlider">
+        <div class="testimonials__track" id="testimonialTrack">
+          <blockquote class="testimonial-card">
+            <div class="testimonial-card__quote">&ldquo;</div>
+            <p class="testimonial-card__text">Taufiqul showed strong academic engagement, attentiveness, and eagerness to participate in class discussions. He demonstrated a genuine interest in hands-on learning and research, with the ability to define problems clearly, identify important factors, and think through possible solutions. His humility, positivity, and enthusiasm make him a valuable member of any academic environment.</p>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar">A</div>
+              <div>
+                <strong>Dr. Aniqua Nusrat Zereen</strong>
+                <span>Assistant Professor, Department of CSE, BRAC University</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <div class="testimonial-card__quote">&ldquo;</div>
+            <p class="testimonial-card__text">Taufiqul stood out for his software engineering mindset, especially in requirement analysis, system design, and thoughtful implementation. His academic record, industry experience, and teaching leadership show his ability to connect theory with practice. He communicates complex ideas clearly, mentors students effectively, and brings responsibility and maturity to academic and professional work.</p>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar">S</div>
+              <div>
+                <strong>Md Saiful Islam</strong>
+                <span>Senior Lecturer, Department of CSE, BRAC University</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="testimonials__controls">
+          <button class="slider-btn" id="sliderPrev" aria-label="Previous">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn" id="sliderNext" aria-label="Next">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- Submit Testimonial -->
+      <div class="testimonial-submit reveal-slide">
+        <p class="testimonial-submit__text">Worked with me or been my student? I'd appreciate your feedback.</p>
+        <a href="mailto:taufiqulislamkhan@gmail.com?subject=Testimonial%20for%20Taufiqul%20Islam%20Khan&body=Hi%20Taufiqul%2C%0A%0AI%20would%20like%20to%20share%20a%20testimonial%20for%20your%20portfolio.%0A%0AMy%20Name%3A%20%0AMy%20Title%20%26%20Organization%3A%20%0A%0ATestimonial%3A%0A%0A" class="btn btn--outline" data-magnetic>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Submit a Testimonial</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="section contact" id="contact">
+    <div class="container contact__inner">
+      <span class="section__label reveal-slide">Get in Touch</span>
+      <h2 class="section__title split-text">Let's Connect</h2>
+      <p class="contact__text reveal-slide">Whether it's a research collaboration, teaching opportunity, or software project — I'd love to hear from you.</p>
+      <a href="mailto:taufiqulislamkhan@gmail.com" class="contact__email reveal-slide">taufiqulislamkhan@gmail.com</a>
+      <div class="contact__links reveal-slide">
+        <a href="https://www.linkedin.com/in/taufiqul-islam-khan-55603a1b8/" target="_blank" rel="noopener" class="btn btn--primary btn--glow" data-magnetic>LinkedIn</a>
+        <a href="https://github.com/Taufiqul-Islam-Khan" target="_blank" rel="noopener" class="btn btn--outline" data-magnetic>GitHub</a>
+        <a href="https://scholar.google.com/citations?user=yINPGNUAAAAJ&hl=en&authuser=4" target="_blank" rel="noopener" class="btn btn--outline" data-magnetic>Google Scholar</a>
+        <a href="https://www.facebook.com/tawfiqul.khan.3/" target="_blank" rel="noopener" class="btn btn--outline" data-magnetic>Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; 2026 Taufiqul Islam Khan. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/taufiqul-islam-khan-55603a1b8/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Taufiqul-Islam-Khan" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=yINPGNUAAAAJ&hl=en&authuser=4" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.facebook.com/tawfiqul.khan.3/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ========== THEME SWITCHER ========== -->
+  <div class="theme-switcher" id="themeSwitcher">
+    <div class="theme-switcher__panel" id="themePanel">
+      <button class="theme-switcher__option active" data-theme="dark">
+        <span class="theme-switcher__swatch" style="background:#0f0f1a"></span>
+        Dark
+      </button>
+      <button class="theme-switcher__option" data-theme="light">
+        <span class="theme-switcher__swatch" style="background:#fafafa"></span>
+        Light
+      </button>
+      <button class="theme-switcher__option" data-theme="nord">
+        <span class="theme-switcher__swatch" style="background:#2e3440"></span>
+        Nord
+      </button>
+      <button class="theme-switcher__option" data-theme="emerald">
+        <span class="theme-switcher__swatch" style="background:#0c1a14"></span>
+        Emerald
+      </button>
+    </div>
+    <button class="theme-switcher__toggle" id="themeToggle" aria-label="Change theme" title="Change theme">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
