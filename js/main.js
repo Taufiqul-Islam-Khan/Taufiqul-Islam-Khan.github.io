@@ -181,14 +181,25 @@
 
   // ========== TYPING ANIMATION ==========
   var typedEl = document.getElementById('typedText');
+  var typedPrefix = document.querySelector('.hero__typed-prefix');
   var roles = [
-    'Full-Time Lecturer at BRAC University',
-    'MAMBA Lab Researcher',
+    'Fully Funded M.Sc. Student at University of Manitoba',
     'Sessional Instructor at University of Manitoba',
-    'Software Engineer',
+    'MAMBA Lab Researcher',
+    'Admitted Ph.D. Researcher — Joining January 2027',
+    'Former Full-Time Lecturer at BRAC University (2021–2024)',
+    'Former Software Engineer at BJIT & ServiceEngine (2020–2022)',
     'Educator and Mentor'
   ];
+  var vowels = ['a','e','i','o','u'];
   var roleIndex = 0, charIndex = 0, isDeleting = false;
+
+  function updateArticle(role) {
+    if (typedPrefix) {
+      var first = role.charAt(0).toLowerCase();
+      typedPrefix.textContent = vowels.indexOf(first) >= 0 ? 'I am an ' : 'I am a ';
+    }
+  }
 
   function typeRole() {
     var currentRole = roles[roleIndex];
@@ -208,12 +219,14 @@
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       roleIndex = (roleIndex + 1) % roles.length;
+      updateArticle(roles[roleIndex]);
       delay = 500;
     }
 
     setTimeout(typeRole, delay);
   }
 
+  updateArticle(roles[0]);
   setTimeout(typeRole, 1800);
 
   // ========== SCROLL REVEAL ==========
@@ -278,7 +291,7 @@
 
   // ========== STAGGERED REVEAL ==========
   var gridContainers = document.querySelectorAll(
-    '.projects__grid, .research__grid, .skills__grid, .impact__grid, .achievements__list, .talks__grid'
+    '.projects__grid, .research__grid, .skills__grid, .impact__grid, .achievements__list, .talks__grid, .beyond__grid'
   );
 
   gridContainers.forEach(function (grid) {
