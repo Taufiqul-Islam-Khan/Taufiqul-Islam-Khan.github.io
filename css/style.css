@@ -511,11 +511,12 @@ button { font-family: inherit; }
 
 /* ---------- HERO ---------- */
 .hero {
-  min-height: 100vh;
+  /* leave room for the marquee so it shows on the first screen */
+  min-height: calc(100vh - 70px);
   display: flex;
   align-items: center;
   position: relative;
-  padding: calc(var(--header-h) + 40px) 0 80px;
+  padding: calc(var(--header-h) + 24px) 0 64px;
   overflow: hidden;
   z-index: 1;
 }
@@ -526,7 +527,7 @@ button { font-family: inherit; }
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   opacity: 0;
   animation: fadeSlideUp .7s .3s ease forwards;
 }
@@ -641,7 +642,7 @@ button { font-family: inherit; }
   color: var(--color-text-secondary);
   text-align: justify;
   line-height: 1.75;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   opacity: 0;
   animation: fadeSlideUp .7s .9s ease forwards;
 }
