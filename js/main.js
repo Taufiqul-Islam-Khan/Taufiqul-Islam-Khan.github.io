@@ -183,13 +183,12 @@
   var typedEl = document.getElementById('typedText');
   var typedPrefix = document.querySelector('.hero__typed-prefix');
   var roles = [
-    'Fully Funded M.Sc. Student at University of Manitoba',
-    'Sessional Instructor at University of Manitoba',
-    'MAMBA Lab Researcher',
-    'Admitted Ph.D. Researcher (Joining January 2027)',
-    'Former Full-Time Lecturer at BRAC University (2021–2024)',
-    'Former Software Engineer at BJIT & ServiceEngine (2020–2022)',
-    'Educator and Mentor'
+    'grad student',
+    'sessional instructor',
+    'researcher at MAMBA Lab',
+    'future Ph.D. student',
+    'former lecturer at BRAC University',
+    'former software engineer'
   ];
   var vowels = ['a','e','i','o','u'];
   var roleIndex = 0, charIndex = 0, isDeleting = false;
