@@ -857,8 +857,27 @@ button { font-family: inherit; }
   z-index: 1;
 }
 
-.section:nth-child(even) {
+.section--alt {
   background: var(--color-surface);
+}
+
+/* Inner pages: clear the fixed header and fill the screen above the footer */
+.page-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-main > .section:first-child {
+  padding-top: calc(var(--header-h) + 64px);
+}
+
+.page-main > .section:last-child {
+  flex: 1;
+}
+
+.preloaded .preloader {
+  display: none;
 }
 
 .section__label {
@@ -2285,6 +2304,7 @@ button { font-family: inherit; }
   .hero__ctas .btn { justify-content: center; }
 
   .section { padding: 64px 0; }
+  .page-main > .section:first-child { padding-top: calc(var(--header-h) + 40px); }
   .section__title { margin-bottom: 32px; }
 
   .impact__grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }

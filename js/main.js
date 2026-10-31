@@ -12,7 +12,8 @@
     setTimeout(function () {
       preloader.classList.add('hidden');
       document.body.classList.remove('no-scroll');
-    }, 1600);
+      try { sessionStorage.setItem('portfolio-loaded', '1'); } catch (e) {}
+    }, document.documentElement.classList.contains('preloaded') ? 0 : 1600);
   });
 
   // ========== THEME SWITCHER ==========
@@ -176,8 +177,11 @@
     });
   }
 
-  window.addEventListener('scroll', highlightNav, { passive: true });
-  highlightNav();
+  // Only the home page has in-page links; other pages mark their tab in the HTML
+  if (document.getElementById('hero')) {
+    window.addEventListener('scroll', highlightNav, { passive: true });
+    highlightNav();
+  }
 
   // ========== TYPING ANIMATION ==========
   var typedEl = document.getElementById('typedText');
@@ -225,8 +229,10 @@
     setTimeout(typeRole, delay);
   }
 
-  updateArticle(roles[0]);
-  setTimeout(typeRole, 1800);
+  if (typedEl) {
+    updateArticle(roles[0]);
+    setTimeout(typeRole, 1800);
+  }
 
   // ========== SCROLL REVEAL ==========
   var revealElements = document.querySelectorAll(
@@ -358,13 +364,15 @@
     document.body.classList.remove('no-scroll');
   }
 
-  modalClose.addEventListener('click', closeModal);
-  modalOverlay.addEventListener('click', function (e) {
-    if (e.target === modalOverlay) closeModal();
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeModal();
-  });
+  if (modalOverlay) {
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', function (e) {
+      if (e.target === modalOverlay) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  }
 
   // ========== TESTIMONIAL SLIDER ==========
   var track = document.getElementById('testimonialTrack');

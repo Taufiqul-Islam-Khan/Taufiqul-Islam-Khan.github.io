@@ -4,7 +4,7 @@ Personal portfolio website showcasing my work as a Software Engineering research
 
 ## About
 
-A single-page portfolio built with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools. Features a dark modern design with four switchable themes, scroll-triggered animations, particle backgrounds, and a fully responsive layout.
+A multi-page portfolio built with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools. Features a dark modern design with four switchable themes, scroll-triggered animations, particle backgrounds, and a fully responsive layout.
 
 ## Features
 
@@ -30,7 +30,10 @@ A single-page portfolio built with vanilla HTML, CSS, and JavaScript — no fram
 
 ```
 .
-├── index.html              # Single-page application
+├── index.html              # Home page (hero and About)
+├── experience.html         # One page per nav tab: experience, education,
+├── ...                     #   research, projects, talks, skills,
+├── contact.html            #   achievements, beyond, contact
 ├── css/
 │   └── style.css           # All styles, themes, and responsive rules
 ├── js/
@@ -71,7 +74,7 @@ python -m http.server 3000
 
 **Typed roles** are configured in the `roles` array in `js/main.js`.
 
-**Projects** can be added by duplicating a `<article class="project-card">` block and its corresponding `<template>` modal in `index.html`.
+**Projects** can be added by duplicating a `<article class="project-card">` block and its corresponding `<template>` modal in `projects.html`. The header nav and footer are repeated in every page, so a change there must be made in each file.
 
 ## License
 

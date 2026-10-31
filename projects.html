@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Taufiqul Islam Khan</title>
+  <meta name="description" content="Portfolio of Taufiqul Islam Khan, an M.Sc. Computer Science researcher at the University of Manitoba working on code review automation, AI tools for developers, and software engineering education.">
+  <meta name="keywords" content="Taufiqul Islam Khan, Software Engineering, Code Review, LLM, Machine Learning, University of Manitoba, MAMBA Lab, Researcher, Educator">
+  <meta name="author" content="Taufiqul Islam Khan">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261031">
+  <script>try{if(sessionStorage.getItem('portfolio-loaded'))document.documentElement.classList.add('preloaded')}catch(e){}</script>
+</head>
+<body>
+  <!-- ========== PRELOADER ========== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__logo">TIK</div>
+      <div class="preloader__bar"><div class="preloader__fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ========== CUSTOM CURSOR ========== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ========== SCROLL PROGRESS BAR ========== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ========== PARTICLE CANVAS (Hero background) ========== -->
+  <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo-wrap" data-magnetic>
+        <span class="header__logo">TIK</span>
+        <span class="header__fullname">Taufiqul Islam Khan</span>
+      </a>
+      <nav class="header__nav" id="nav">
+        <ul class="header__links">
+          <li><a href="index.html" class="nav-link" data-magnetic>Home</a></li>
+          <li><a href="index.html#about" class="nav-link" data-magnetic>About</a></li>
+          <li><a href="experience.html" class="nav-link" data-magnetic>Experience</a></li>
+          <li><a href="education.html" class="nav-link" data-magnetic>Education</a></li>
+          <li><a href="research.html" class="nav-link" data-magnetic>Research</a></li>
+          <li><a href="projects.html" class="nav-link active" data-magnetic>Projects</a></li>
+          <li><a href="talks.html" class="nav-link" data-magnetic>Talks</a></li>
+          <li><a href="skills.html" class="nav-link" data-magnetic>Skills</a></li>
+          <li><a href="achievements.html" class="nav-link" data-magnetic>Awards</a></li>
+          <li><a href="beyond.html" class="nav-link" data-magnetic>Beyond</a></li>
+          <li><a href="contact.html" class="nav-link" data-magnetic>Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="https://www.linkedin.com/in/taufiqul-islam-khan-55603a1b8/" target="_blank" rel="noopener" class="header__social" aria-label="LinkedIn" data-magnetic>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://github.com/Taufiqul-Islam-Khan" target="_blank" rel="noopener" class="header__social" aria-label="GitHub" data-magnetic>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://scholar.google.com/citations?user=yINPGNUAAAAJ&hl=en&authuser=4" target="_blank" rel="noopener" class="header__social" aria-label="Google Scholar" data-magnetic>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/tawfiqul.khan.3/" target="_blank" rel="noopener" class="header__social" aria-label="Facebook" data-magnetic>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+      <button class="header__burger" id="burger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page-main">
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <span class="section__label reveal-slide">Selected Work</span>
+      <h2 class="section__title split-text">Projects & Case Studies</h2>
+
+      <!-- Project Filter Tabs -->
+      <div class="project-filters reveal-slide">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ml">AI / ML</button>
+        <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+        <button class="filter-btn" data-filter="data">Data / Backend</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+      </div>
+
+      <div class="projects__grid">
+
+        <!-- 2025 -->
+        <article class="project-card tilt-card" data-category="ml" data-modal="modal-evoting">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Blockchain / ML</span>
+            <span class="project-card__year">2025</span>
+          </div>
+          <h3 class="project-card__title">Leveraging Blockchain and Machine Learning for a Secure and Transparent Voting System</h3>
+          <p class="project-card__desc">Built a full-stack e-voting system where votes are recorded on a blockchain and voter identity is verified through facial recognition. The goal was to make elections tamper-proof and transparent without compromising voter privacy.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Developer &amp; Researcher</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">Blockchain</span>
+              <span class="tool-tag">Smart Contracts</span>
+              <span class="tool-tag">Machine Learning</span>
+              <span class="tool-tag">Facial Recognition</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-evoting">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <article class="project-card tilt-card" data-category="data" data-modal="modal-smartcontract">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Blockchain / Solidity</span>
+            <span class="project-card__year">2025</span>
+          </div>
+          <h3 class="project-card__title">Smart Contract for a Decentralized Energy Marketplace &amp; Auction Mechanisms</h3>
+          <p class="project-card__desc">Solidity smart contracts for a decentralized energy marketplace where producers list energy and buyers bid through English and second-price (Vickrey) auctions. Built as a course project at UManitoba's blockchain course.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Developer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">Solidity</span>
+              <span class="tool-tag">Remix IDE</span>
+              <span class="tool-tag">Blockchain</span>
+              <span class="tool-tag">Smart Contracts</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-smartcontract">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <!-- 2022 -->
+        <article class="project-card tilt-card" data-category="fullstack" data-modal="modal-devconnect">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Full-Stack / MERN</span>
+            <span class="project-card__year">2022</span>
+          </div>
+          <h3 class="project-card__title">DevConnector: A Developer Social Network</h3>
+          <p class="project-card__desc">A MERN stack social platform where developers can create profiles, share posts, discuss technical problems, and showcase their GitHub repos. Built it to learn full-stack development end to end.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Full-Stack Developer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">MongoDB</span>
+              <span class="tool-tag">Express</span>
+              <span class="tool-tag">React</span>
+              <span class="tool-tag">Node.js</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-devconnect">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <article class="project-card tilt-card" data-category="data" data-modal="modal-spring">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Backend / Enterprise</span>
+            <span class="project-card__year">2022</span>
+          </div>
+          <h3 class="project-card__title">Enterprise Backend Services (BJIT Group)</h3>
+          <p class="project-card__desc">Backend services I built at BJIT using Spring Boot, REST APIs, and 3dSpace integration for a Japanese enterprise client. Used Adapter and Observer patterns to keep the codebase clean and testable.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Backend Engineer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">Spring Boot</span>
+              <span class="tool-tag">REST API</span>
+              <span class="tool-tag">Java</span>
+              <span class="tool-tag">3dSpace</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-spring">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <!-- 2021 -->
+        <article class="project-card tilt-card" data-category="ml" data-modal="modal-plate">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Computer Vision</span>
+            <span class="project-card__year">2021</span>
+          </div>
+          <h3 class="project-card__title">Number Plate Recognition System</h3>
+          <p class="project-card__desc">Built a real-time system that detects and reads license plates from traffic video feeds. Used TensorFlow for plate detection and OCR for character extraction. It was actually deployed in a production pipeline at ServiceEngine.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> ML Engineer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">TensorFlow</span>
+              <span class="tool-tag">OpenCV</span>
+              <span class="tool-tag">OCR</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-plate">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <article class="project-card tilt-card" data-category="data" data-modal="modal-stackoverflow">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Web App / Python</span>
+            <span class="project-card__year">2021</span>
+          </div>
+          <h3 class="project-card__title">StackOverflow Question Search &amp; Filter Tool</h3>
+          <p class="project-card__desc">A Flask web app that lets you search StackOverflow by topic, filter by vote count and time, and see results color-coded by quality (green = good, red = poor). Built it as a quick tool for my own research workflow.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Developer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Flask</span>
+              <span class="tool-tag">HTML/CSS</span>
+              <span class="tool-tag">API</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-stackoverflow">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <article class="project-card tilt-card" data-category="data" data-modal="modal-pipeline">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Data Engineering</span>
+            <span class="project-card__year">2021</span>
+          </div>
+          <h3 class="project-card__title">Automated Data Pipelines (ServiceEngine)</h3>
+          <p class="project-card__desc">Python scripts and pipelines I wrote at ServiceEngine to scrape, process, and reformat large datasets automatically. Deployed on AWS with Jenkins, and it replaced a bunch of tedious manual work the team had been doing.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Software Engineer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Jenkins</span>
+              <span class="tool-tag">AWS</span>
+              <span class="tool-tag">Selenium</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-pipeline">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <!-- 2020 -->
+        <article class="project-card tilt-card" data-category="ml" data-modal="modal-movierec">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Machine Learning / R</span>
+            <span class="project-card__year">2020</span>
+          </div>
+          <h3 class="project-card__title">Movie Recommendation System Using R</h3>
+          <p class="project-card__desc">A recommendation engine I built in R using the MovieLens 20M dataset. It learns from user ratings to suggest movies, similar to how Netflix or Spotify recommendations work, but at a smaller scale.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Developer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">R</span>
+              <span class="tool-tag">Machine Learning</span>
+              <span class="tool-tag">MovieLens</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-movierec">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <article class="project-card tilt-card" data-category="data" data-modal="modal-healthcare">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Data Science / R</span>
+            <span class="project-card__year">2020</span>
+          </div>
+          <h3 class="project-card__title">Health Care Data Analysis: Stroke Risk Factors</h3>
+          <p class="project-card__desc">An exploratory data analysis project in R looking at what factors (smoking, diabetes, work type, gender) are most correlated with stroke risk. Lots of visualizations and statistical breakdowns.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Data Analyst</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">R</span>
+              <span class="tool-tag">Data Analysis</span>
+              <span class="tool-tag">Visualization</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-healthcare">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+        <!-- 2019 -->
+        <article class="project-card tilt-card" data-category="mobile" data-modal="modal-opu">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__category">Mobile / EdTech</span>
+            <span class="project-card__year">2019</span>
+          </div>
+          <h3 class="project-card__title">Opu's Coaching Android App</h3>
+          <p class="project-card__desc">An Android application connecting teachers and students for structured online learning, featuring session scheduling and real-time data synchronization with Firebase backend.</p>
+          <div class="project-card__meta">
+            <div class="project-card__role"><strong>Role:</strong> Mobile Developer</div>
+            <div class="project-card__tools">
+              <span class="tool-tag">Android</span>
+              <span class="tool-tag">Java</span>
+              <span class="tool-tag">Firebase</span>
+            </div>
+          </div>
+          <button class="project-card__link" data-open-modal="modal-opu">View Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECT MODALS ========== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modalContent">
+      <button class="modal__close" id="modalClose">&times;</button>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Modal data (hidden, used by JS) -->
+  <template id="modal-evoting">
+    <span class="modal__category">Blockchain / ML &middot; 2025</span>
+    <h2>Leveraging Blockchain and Machine Learning for a Secure and Transparent Voting System</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>Built a full-stack e-voting system where votes are recorded on a blockchain and voter identity is verified through ML-based facial recognition. The idea was to make the whole process tamper-proof and transparent while still keeping voter privacy intact.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Problem</h4>
+      <p>Traditional voting systems are vulnerable to fraud, manipulation, and identity theft. This project addresses all three through a decentralized, biometric-secured approach.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Blockchain-based vote recording with smart contract validation</li>
+        <li>Real-time ML facial recognition for voter identity verification</li>
+        <li>Tamper-proof, transparent, and auditable voting process</li>
+        <li>Privacy-conscious design with encrypted biometric data</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">Blockchain</span><span class="tool-tag">Smart Contracts</span><span class="tool-tag">Machine Learning</span><span class="tool-tag">Facial Recognition</span><span class="tool-tag">Full-Stack</span>
+    </div>
+    <a href="https://github.com/Taufiqul-Islam-Khan/Leveraging-Blockchain-and-Machine-Learning-for-a-Secure-and-Transparent-Voting-System" target="_blank" rel="noopener" class="project-card__link" style="margin-top:16px">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+  </template>
+
+  <template id="modal-plate">
+    <span class="modal__category">Computer Vision &middot; 2021</span>
+    <h2>Number Plate Recognition System</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>Built a real-time computer vision system that detects and reads license plates from traffic video feeds. This was part of my work at ServiceEngine BPO, and it actually ran in production.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Real-time video stream processing with OpenCV</li>
+        <li>TensorFlow-based deep learning model for plate region detection</li>
+        <li>OCR integration for character extraction and recognition</li>
+        <li>Robust performance under varying lighting and angle conditions</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">Python</span><span class="tool-tag">TensorFlow</span><span class="tool-tag">OpenCV</span><span class="tool-tag">OCR</span><span class="tool-tag">Deep Learning</span>
+    </div>
+    <a href="https://github.com/Taufiqul-Islam-Khan/Number-Plate-Recognition" target="_blank" rel="noopener" class="project-card__link" style="margin-top:16px">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+  </template>
+
+  <template id="modal-devconnect">
+    <span class="modal__category">Full-Stack / MERN &middot; 2022</span>
+    <h2>DevConnector: A Developer Social Network</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>A MERN stack social platform where developers can create profiles, share posts, discuss technical problems, and showcase their GitHub repos. Built it to learn full-stack development properly.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>User authentication with JWT and profile management</li>
+        <li>Post creation, commenting, and developer collaboration feeds</li>
+        <li>GitHub integration for showcasing repositories</li>
+        <li>Responsive UI built with React and Redux state management</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">MongoDB</span><span class="tool-tag">Express</span><span class="tool-tag">React</span><span class="tool-tag">Node.js</span><span class="tool-tag">Redux</span>
+    </div>
+    <a href="https://github.com/Taufiqul-Islam-Khan/MERN-project" target="_blank" rel="noopener" class="project-card__link" style="margin-top:16px">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+  </template>
+
+  <template id="modal-spring">
+    <span class="modal__category">Backend / Enterprise &middot; 2022</span>
+    <h2>Enterprise Backend Services (BJIT Group)</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>Backend services I built at BJIT Group using Spring Boot, REST APIs, and 3dSpace integration for a Japanese enterprise client's product lifecycle management system.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Implemented Adapter and Observer design patterns for modularity</li>
+        <li>RESTful API architecture with Spring Boot</li>
+        <li>3dSpace database integration for product lifecycle management</li>
+        <li>Regular code refactoring and unit testing</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">Spring Boot</span><span class="tool-tag">REST API</span><span class="tool-tag">Java</span><span class="tool-tag">3dSpace</span><span class="tool-tag">Design Patterns</span>
+    </div>
+  </template>
+
+  <template id="modal-pipeline">
+    <span class="modal__category">Data Engineering &middot; 2021</span>
+    <h2>Automated Data Pipelines (ServiceEngine)</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>Python scripts and pipelines I wrote at ServiceEngine to scrape, process, and reformat large datasets automatically. Deployed on AWS with Jenkins CI/CD, and it replaced a lot of manual work the team had been doing before.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Web scraping pipelines with Groovy, Python, and Selenium</li>
+        <li>OCR and image processing for unstructured data extraction</li>
+        <li>Supervised ML models for data validation and quality-checking</li>
+        <li>Cost-efficient automated pipelines on AWS cloud infrastructure</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">Python</span><span class="tool-tag">Jenkins</span><span class="tool-tag">AWS</span><span class="tool-tag">Selenium</span><span class="tool-tag">TensorFlow</span>
+    </div>
+  </template>
+
+  <template id="modal-opu">
+    <span class="modal__category">Mobile / EdTech &middot; 2019</span>
+    <h2>Opu's Coaching Android App</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>Designed and built an Android application to connect teachers and students for structured online learning sessions as an academic project at BRAC University.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Teacher and student registration and profile management</li>
+        <li>Session scheduling and booking system</li>
+        <li>Real-time Firebase integration for data synchronization</li>
+        <li>Clean Material Design UI that's easy to use</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">Android</span><span class="tool-tag">Java</span><span class="tool-tag">Firebase</span><span class="tool-tag">Material Design</span>
+    </div>
+  </template>
+
+  <template id="modal-stackoverflow">
+    <span class="modal__category">Web App / Python &middot; 2021</span>
+    <h2>StackOverflow Question Search Tool</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>A Flask-based web application that enables users to search StackOverflow for highly-voted and recent questions based on custom criteria, streamlining research and topic exploration.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Search any topic on StackOverflow with customizable filters for quantity and time frame</li>
+        <li>Color-coded results: green for positive scores, red for negative, blue for neutral</li>
+        <li>Answer count analysis and common tag identification for quick relevance assessment</li>
+        <li>Web-based interface built with Flask, HTML, CSS, and JavaScript</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">Python</span><span class="tool-tag">Flask</span><span class="tool-tag">HTML/CSS</span><span class="tool-tag">StackOverflow API</span>
+    </div>
+    <a href="https://github.com/Taufiqul-Islam-Khan/StackOverflowTask" target="_blank" rel="noopener" class="project-card__link" style="margin-top:16px">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+  </template>
+
+  <template id="modal-movierec">
+    <span class="modal__category">Machine Learning / R &middot; 2020</span>
+    <h2>Movie Recommendation System</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>A machine learning-based recommendation engine built in R that learns user viewing patterns and suggests relevant movies, utilizing the MovieLens 20M dataset from Kaggle.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Collaborative filtering-based recommendation algorithm</li>
+        <li>Trained on MovieLens 20M dataset with movies and ratings data</li>
+        <li>Personalized suggestions based on user viewing history and preferences</li>
+        <li>Demonstrates practical recommendation system architecture used by streaming platforms</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">R</span><span class="tool-tag">Machine Learning</span><span class="tool-tag">Recommendation System</span><span class="tool-tag">MovieLens</span>
+    </div>
+  </template>
+
+  <template id="modal-healthcare">
+    <span class="modal__category">Data Science / R &middot; 2020</span>
+    <h2>Healthcare Data Analysis</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>An R-based exploratory data analysis project focused on healthcare datasets, examining patterns between various health risk factors and disease outcomes, particularly stroke prediction.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Statistical analysis of stroke healthcare dataset with multiple health variables</li>
+        <li>Visualizations: bar charts, histograms, and line charts comparing risk factors</li>
+        <li>Analysis of smoking status, diabetes, work type, and gender-based disease patterns</li>
+        <li>Exploratory insights for health risk factor identification and pattern recognition</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">R</span><span class="tool-tag">Data Analysis</span><span class="tool-tag">Healthcare</span><span class="tool-tag">Visualization</span>
+    </div>
+    <a href="https://github.com/Taufiqul-Islam-Khan/health-Care-Data-Analysis-Project" target="_blank" rel="noopener" class="project-card__link" style="margin-top:16px">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+  </template>
+
+  <template id="modal-smartcontract">
+    <span class="modal__category">Blockchain / Solidity &middot; 2025</span>
+    <h2>Smart Contract for a Decentralized Energy Marketplace &amp; Auction Mechanisms</h2>
+    <div class="modal__section">
+      <h4>Overview</h4>
+      <p>Solidity smart contracts implementing a decentralized energy marketplace where energy producers can list their energy for sale and buyers can bid through different auction mechanisms. This was an academic project for the blockchain course at the University of Manitoba.</p>
+    </div>
+    <div class="modal__section">
+      <h4>Key Features</h4>
+      <ul>
+        <li>Energy producers register and list energy with price, quantity, and source type (solar, wind, etc.)</li>
+        <li>English auction: buyers bid openly and the highest bid wins</li>
+        <li>Second-price (Vickrey) auction: the highest bidder wins but pays the second-highest price, which encourages honest bidding</li>
+        <li>On-chain energy purchase, delivery confirmation, and automatic payment settlement</li>
+        <li>Built and tested using Solidity ^0.8.0 on Remix IDE</li>
+      </ul>
+    </div>
+    <div class="modal__tags">
+      <span class="tool-tag">Solidity</span><span class="tool-tag">Remix IDE</span><span class="tool-tag">Blockchain</span><span class="tool-tag">Smart Contracts</span><span class="tool-tag">Auction Mechanisms</span>
+    </div>
+    <a href="https://github.com/Taufiqul-Islam-Khan/Smart-Contract-for-a-Decentralized-Energy-Marketplace-and-Auction-Mechanisms" target="_blank" rel="noopener" class="project-card__link" style="margin-top:16px">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+  </template>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; 2026 Taufiqul Islam Khan. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/taufiqul-islam-khan-55603a1b8/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Taufiqul-Islam-Khan" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=yINPGNUAAAAJ&hl=en&authuser=4" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.facebook.com/tawfiqul.khan.3/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ========== THEME SWITCHER ========== -->
+  <div class="theme-switcher" id="themeSwitcher">
+    <div class="theme-switcher__panel" id="themePanel">
+      <button class="theme-switcher__option active" data-theme="dark">
+        <span class="theme-switcher__swatch" style="background:#0f0f1a"></span>
+        Dark
+      </button>
+      <button class="theme-switcher__option" data-theme="light">
+        <span class="theme-switcher__swatch" style="background:#fafafa"></span>
+        Light
+      </button>
+      <button class="theme-switcher__option" data-theme="nord">
+        <span class="theme-switcher__swatch" style="background:#2e3440"></span>
+        Nord
+      </button>
+      <button class="theme-switcher__option" data-theme="emerald">
+        <span class="theme-switcher__swatch" style="background:#0c1a14"></span>
+        Emerald
+      </button>
+    </div>
+    <button class="theme-switcher__toggle" id="themeToggle" aria-label="Change theme" title="Change theme">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+  </div>
+
+  <script src="js/main.js?v=20261031"></script>
+</body>
+</html>
